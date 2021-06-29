@@ -1,0 +1,23 @@
+footer {
+	padding: 85px;
+	background: $grey;
+
+	.caption{
+		.des{
+			@include tẽ
+		}
+	}
+
+	@include desktop {
+		
+	}
+	@include tablet {
+		
+	}
+	@include mobile {
+		
+	}
+	@include mobile-xxs {
+		
+	}
+}

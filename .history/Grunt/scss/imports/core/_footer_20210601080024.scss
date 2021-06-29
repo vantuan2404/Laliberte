@@ -1,0 +1,48 @@
+footer {
+	padding: 85px;
+	background: $grey;
+	--fs-small:14px;
+	--fs-medium:24px;
+	.caption{
+		.brand{
+			margin-bottom: 20px;
+		}
+		.des{
+			@include text(var(--fs-small),'Inter-R',$lh-medium,$white-cl,none);
+		}
+	}
+
+	.about{
+		.title{
+			@include text(var(--fs-medium),'Phi-R',$lh-medium,$white-cl,none);
+			margin-bottom: 30px;
+		}
+
+		.menu{
+			@include midflex();
+			justify-content: flex-start;
+
+			ul{
+				padding: 20p;
+				li{
+					a{
+						@include text($fs-small,'Inter-R',$lh-medium,$white-cl,none);
+					}
+				}
+			}
+		}
+	}
+
+	@include desktop {
+		
+	}
+	@include tablet {
+		
+	}
+	@include mobile {
+		
+	}
+	@include mobile-xxs {
+		
+	}
+}

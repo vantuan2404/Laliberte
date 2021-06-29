@@ -1,0 +1,108 @@
+.media{
+    .banner{
+        position: relative;
+        background-image: url('../../../img/yacht/banner/banner.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        .filter{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            max-height: 110px;
+            background: $crystalBlue;
+            z-index: 5;
+            .row{
+                padding: 45px 0;
+            }
+            &__item{
+                --fs-small:14px;
+                padding:0 30px;
+                border-right: 1px solid $white-cl;
+                &:last-child{
+                    padding-right: 0;
+                    border-right: none;
+                }
+                &:first-child{
+                    padding: 0;
+                    padding-right: 30px;
+                }
+                .option{
+                    display: none;
+                }
+                .select{
+                    @include midflex();
+                    justify-content: space-between;
+                    cursor: pointer;
+                    .text{
+                        h6{
+                            @include text($fs-small,'Inter-R',$lh-small,$white-cl,none);
+                        }
+                        span{
+                            @include text(var(--fs-small),'Inter-R',$lh-small,#979797,none);
+                        }
+                    }
+                }
+            }
+            .remove-filter{
+                --blue:#03CEDA;
+                --transition: background .3s, color .3s;
+                @include midflex();
+                .btn{
+                    border-radius: 5px;
+                    border: 1px solid var(--blue);
+                    cursor: pointer;
+                    width: 120px;
+                    height: 50px;
+                    @include midflex();
+                    display: inline-flex;
+                    transform: translateY(-4px);
+                    transition: var(--transition);
+                    span{
+                        @include text($fs-small,'Inter-R',$lh-small,var(--blue),none);
+                        transition: var(--transition);
+                    }
+
+                    &:hover{
+                        background: var(--blue);
+                        transition: var(--transition);
+                        span{
+                            color: $white-cl;
+                            transition: var(--transition);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sec-1{
+        margin: 50px 0;
+
+        .grid{
+            &__detail{
+                display: grid;
+                grid-column-gap: 30px;
+                grid-row-gap: 80px;
+                padding: 15px;
+                grid-template-columns: repeat(3, 395px);
+                grid-template-rows: repeat(3 , 420px);
+            }
+
+            &-item{
+                .img{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    img{
+                        @include mid();
+                    }
+                }
+            }
+        }
+    }
+}

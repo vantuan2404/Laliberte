@@ -1,0 +1,23 @@
+footer {
+	padding: 85px;
+	background: $grey;
+	--fs-small:14px;
+	.caption{
+		.des{
+			@include text()
+		}
+	}
+
+	@include desktop {
+		
+	}
+	@include tablet {
+		
+	}
+	@include mobile {
+		
+	}
+	@include mobile-xxs {
+		
+	}
+}

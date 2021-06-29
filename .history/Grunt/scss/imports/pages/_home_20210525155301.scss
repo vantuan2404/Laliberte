@@ -1,0 +1,24 @@
+main{
+    .banner{
+        background-image: url('./../../../img/home/banner/banner.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        @include midflex();
+        position: relative;
+        &::after{
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        .box-main{
+            max-width: 650px;
+        }
+    }
+}
+
+
+

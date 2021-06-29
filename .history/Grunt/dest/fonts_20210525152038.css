@@ -1,0 +1,7 @@
+@font-face{
+    font-family:'SFU-A';
+    src: url('../font/SFUDINEngAlt.woff') format('woff');
+    src: url('../font/SFUDINEngAlt.woff2') format('woff2');
+    display: fallback;
+}
+

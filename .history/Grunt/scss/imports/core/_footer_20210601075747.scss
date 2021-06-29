@@ -1,0 +1,26 @@
+footer {
+	padding: 85px;
+	background: $grey;
+	--fs-small:14px;
+	.caption{
+		.brand{
+			margin-bottom: 
+		}
+		.des{
+			@include text(var(--fs-small),'Inter-R',$lh-medium,$white-cl,none);
+		}
+	}
+
+	@include desktop {
+		
+	}
+	@include tablet {
+		
+	}
+	@include mobile {
+		
+	}
+	@include mobile-xxs {
+		
+	}
+}

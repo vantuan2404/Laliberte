@@ -1,0 +1,51 @@
+header{
+	position: fixed;
+	background: transparent;
+	width: 100%;
+	height: 100px;
+	left: 0;
+	top: 0;
+	z-index: 100;
+
+	.container{
+		@include midflex();
+		justify-content: space-between;
+		height: 100%;
+
+		&::before, &::after{
+			display: none;
+		}
+
+		.brand{
+
+		}
+		.nav{
+			ul{
+				@include midflex();
+				justify-content: flex-end;
+
+				li{
+					margin: 0 15px;
+					a{
+						@include text($fs-small,'Inter-R',$lh-small,$white-cl,uppercase);
+					}
+				}
+
+				.rent{
+					margin: 0 0 0 30px;
+					background: $blue;
+					a{
+						padding: 10px 30px;
+						color: $grey;
+
+						&:hover{
+							background: $grey;
+							color: $white-cl;
+							tran
+						}
+					}
+				}
+			}
+		}
+	}
+}

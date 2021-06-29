@@ -1,0 +1,44 @@
+@font-face{
+    font-family:'Phi-R';
+    src: url('../font/Philosopher-Regular.woff') format('woff');
+    src: url('../font/Philosopher-Regular.woff2') format('woff2');
+    display: fallback;
+}
+
+@font-face{
+    font-family:'Phi-I';
+    src: url('../font/Philosopher-Italic.woff') format('woff');
+    src: url('../font/Philosopher-Italic.woff2') format('woff2');
+    display: fallback;
+}
+
+@font-face{
+    font-family:'Phi-B';
+    src: url('../font/Philosopher-Bold.woff') format('woff');
+    src: url('../font/Philosopher-Bold.woff2') format('woff2');
+    display: fallback;
+}
+
+
+/* Font Inter */
+
+@font-face{
+    font-family:'Inter-R';
+    src: url('../font/Inter-Regular.woff') format('woff');
+    src: url('../font/Inter-Regular.woff2') format('woff2');
+    display: fallback;
+}
+
+@font-face{
+    font-family:'Inter-M';
+    src: url('../font/Inter-Medium.woff') format('woff');
+    src: url('../font/Inter-Regular.woff2') format('woff2');
+    display: fallback;
+}
+
+@font-face{
+    font-family:'Inter-R';
+    src: url('../font/Inter-Regular.woff') format('woff');
+    src: url('../font/Inter-Regular.woff2') format('woff2');
+    display: fallback;
+}

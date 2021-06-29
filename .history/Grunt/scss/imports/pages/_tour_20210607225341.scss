@@ -1,0 +1,97 @@
+.tour{
+    .banner{
+        height: 370px;
+        position: relative;
+
+        img{
+            width: 100%;
+            height: 100%;
+            @include mid();
+        }
+    }
+
+    .wrapper{
+        background: $grey;
+        .sec-1{
+            margin: 80px 0;
+            .caption{
+                @include midflex();
+                justify-content: space-between;
+                w
+                h2{
+                    @include text($fs-main,'Phi-R',$lh-small,$white-cl,none);
+                }
+                .filter{
+                   display: inline-block;
+                    --blue:#03CEDA;
+                    --transition: background .3s, color .3s;
+                    transition: var(--transition);
+                    cursor: pointer;
+                    position: relative;
+                    
+                    
+                    &__btn{
+                        width: 200px;
+                        height: 45px;
+                        @include midflex();
+                        border: 1px solid lightgrey;
+                        span{
+                            @include text(15px,'Inter-R',$lh-medium,lightgrey,none);
+                        }
+                        .current__select{
+                            color: $white-cl;
+                            margin:0 20px;
+                        }
+    
+                        &:hover{
+                            background: var(--blue);
+                            transition: var(--transition);
+                            span{
+                                color: $black-cl;
+                                transition: var(--transition);
+                            }
+                        }
+                    }
+
+                    &__select{
+                        width: 100%;
+                        height: auto;
+                        // position: absolute;
+                        // bottom: -135px;
+                        // left: 0;
+                        border: 1px solid $white-cl;
+                        display: none;
+
+                        ul{
+                            @include midflex();
+                            flex-direction: column;
+                            list-style-type: none;
+                            text-align: left;
+
+                            li{
+                                width: 100%;
+                                padding: 8px;
+                                span{
+                                    @include text($fs-small,'Inter-R',$lh-medium,lightgrey,none);
+                                }
+
+                                img{
+                                    transition: var(--transition);
+                                }
+
+                                .active{
+                                    transform: rotate(-90deg);
+                                    transition: var(--transition);
+                                }
+
+                                &:hover{
+                                    background: rgba($color: $white-cl, $alpha: .4);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

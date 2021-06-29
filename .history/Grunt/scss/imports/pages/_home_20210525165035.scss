@@ -1,0 +1,164 @@
+main{
+    .banner{
+        background-image: url('./../../../img/home/banner/banner.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        @include midflex();
+        position: relative;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #000000, $alpha: .2);  
+            left: 0;
+            top: 0;         
+            position: absolute; 
+        }
+
+        .box-main{
+            max-width: 650px;
+            position: relative;
+            z-index: 5;
+            .caption{
+                text-align: center;
+                margin-bottom: 10px;
+                h1{
+                    @include text($fs-main,'Phi-R',$lh-small,$white-cl,none);
+                }
+                h6{
+                    margin: auto;
+                    max-width: 445px;
+                    padding-top: 10px;
+                    @include text($fs-small,'Inter-R',$lh-medium,$white-cl,none);
+                }
+            }
+            .find{
+                @include midflex();
+                justify-content: space-between;
+                width: 645px;
+                height: 100px;
+                position: relative;
+                margin-top: 20px;
+
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: $crystalBlue;
+                    opacity: .8;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &-left, &-right{
+                    width: 50%;
+                    @include midflex();
+                    justify-content: space-around;
+                    z-index: 5;
+                    cursor: pointer;
+                    .text{
+                        h6{
+                            @include text($fs-small,'Inter-R',$fs-small,$white-cl,none);
+                        }
+                        span{
+                            @include text(16px,'Inter-R',$fs-small,grey,none);
+                        }
+                    }
+                    .down{
+                        @include midflex();
+                        img{
+                            cursor: pointer;
+                        }
+
+                        .search{
+                            margin-left: 40px;
+                            background: #239FA6;
+                            border-radius: 50%;
+                            padding: 15px;
+                            transition: box-shadow .4s;
+
+                            &:hover{
+                                box-shadow: 0px 0px 11px 8px rgba(245,233,233,0.25);
+                                -webkit-box-shadow: 0px 0px 11px 8px rgba(245,233,233,0.25);
+                                -moz-box-shadow: 0px 0px 11px 8px rgba(245,233,233,0.25);
+                            transition: box-shadow .4s;
+                        }
+                        }
+                    }
+                }
+
+                &-left{
+                    border-right: 1px solid $white-cl;
+                }
+            }
+        }
+    }
+
+    .container{
+        width: 1240px;
+        padding: 0 15px;
+
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: $grey;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .sec-1{
+            margin: 80px 0;
+
+            .caption{
+                text-align: center;
+                margin-bottom: 50px;
+                @include text(22px,'Inter-R',$lh-medium,grey,uppercase);
+            }
+
+            .link{
+                &-item{
+                    @include midflex();
+
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        .banner{
+            .box-main{
+                .caption{
+                    h1{
+                        font-size: 32px;
+                    }
+                    h6{
+                        font-size: 12px;
+                    }
+                }
+                .find{
+                    flex-direction: column;
+                    width: 300px;
+                    height: 200px;
+                    justify-content: center;
+
+                    &-left{
+                        border-right: none;
+                    }
+                    &-left, &-right{
+                        width: 100%;
+                        margin: 30px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

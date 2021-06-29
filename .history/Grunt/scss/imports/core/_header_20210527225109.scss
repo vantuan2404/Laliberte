@@ -1,0 +1,225 @@
+header{
+	position: fixed;
+	background: transparent;
+	width: 100%;
+	height: 100px;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	transition: all .6s;
+
+	.container{
+		@include midflex();
+		justify-content: space-between;
+		height: 100%;
+
+		&::before, &::after{
+			display: none;
+		}
+
+		.brand{
+
+		}
+		.nav{
+			--transition:all .4s;
+			ul{
+				@include midflex();
+				justify-content: flex-end;
+
+				li{
+					margin: 0 15px;
+					a{
+						@include text($fs-small,'Inter-R',$lh-small,$white-cl,uppercase);
+						position: relative;
+
+						&::after{
+							content: "";
+							width: 0%;
+							height: 2px;
+							background: $white-cl;
+							left: 0;
+							right: 0;
+							margin: auto;
+							position: absolute;
+							display: block;
+							transition: width .3s;
+						}
+						&:hover{
+							&::after{
+								width: 100%;
+								transition: width .3s;
+							}
+						}
+					}
+				}
+
+				.rent{
+					margin: 0 0 0 30px;
+					background: $blue;
+					a{
+						padding: 10px 30px;
+						color: $grey;
+					}
+
+					&:hover{
+						background:$grey;
+						transition: var(--transition);
+						a{
+							color: $white-cl;
+							transition: var(--transition);
+
+							&::after{
+								width: 0%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.mobile{
+			display: none;
+		}
+	}
+}
+
+.headerActive{
+	background: $crystalBlue;
+	box-shadow: 0px 18px 11px -1px rgba(95,26,26,0.18);
+	-webkit-box-shadow: 0px 18px 11px -1px rgba(95,26,26,0.18);
+	-moz-box-shadow: 0px 18px 11px -1px rgba(95,26,26,0.18);
+	transition: all .6s;
+
+	.container{
+		.nav{
+			--transition:all .4s;
+			ul{
+				.rent{
+					&:hover{
+						background: $white-cl;
+						transition: var(--transition);
+						a{
+							color: $black-cl;
+						transition: var(--transition);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet{
+	header{
+		.container{
+			.nav{
+				ul{
+					li{
+						margin: 0  10px;
+						a{
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include mobile{
+	header{
+		background: transparent;
+		.container{
+			.brand, .nav{
+				display: none;
+			}
+
+			.mobile{
+				display: block;
+				z-index: 100;
+				width: 100%;
+				position: fixed;
+				height: 100vh;
+				// background: $white-cl;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+
+				&__top{
+					width: 100%;
+					height: 50px;
+					background: $grey;
+					@include midflex();
+					justify-content: space-between;
+					padding: 0 10px;
+
+					&-brand{
+						width: 100px;
+						height: 40px;
+						img{
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+				&__nav{
+					width: 80%;
+					height: 100%;
+					@include midflex();
+					background: linear-gradient(to left top, 
+					transparent,
+					#787FF6 100%
+					);
+					position: relative;
+
+					ul{
+						li{
+							margin: 40px 0;
+							a{
+								@include text($fs-small,'Inter-R',$lh-small,$white-cl,uppercase);
+								position: relative;
+		
+								&::after{
+									content: "";
+									width: 0%;
+									height: 3px;
+									background: $white-cl;
+									left: 0;
+									right: 0;
+									margin: auto;
+									position: absolute;
+									display: block;
+									transition: width .3s;
+								}
+								&:hover{
+									&::after{
+										width: 100%;
+										transition: width .3s;
+									}
+								}
+							}
+						}
+					}
+
+					&::after{
+						content: "";
+						width: 120%;
+						height: 100%;
+						position: absolute;
+						display: block;
+						background: #1F2F98;
+						z-index: -1;
+					}
+				}
+
+				.navActive{
+					left: 0;
+					tra					
+				}
+			}
+		}
+	}
+	.headerActive{
+		background: transparent;
+		box-shadow: none;
+	}
+}
