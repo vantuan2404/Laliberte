@@ -1,7 +1,0 @@
-@font-face{
-    font-family:'SFU-A';
-    src: url('../font/Philosopher-Regular.woff') format('woff');
-    src: url('../font/SFUDINEngAlt.woff2') format('woff2');
-    display: fallback;
-}
-
